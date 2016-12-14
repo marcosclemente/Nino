@@ -21,20 +21,20 @@ for x in range(0, giro, 6):
     y = int(math.sin(x))
     # Add os resultados dos senos na lista
     eixo_y.append(y)
-
+print(eixo_y)
 # Fazendo o gráfico
 
-    plt.figure()
+plt.figure()
 
-    plt.plot(tempo, eixo_y, "-k")
+plt.plot(tempo, eixo_y, "-k")
 
-    plt.title ("Grafico_SENO")
-    plt.xlabel("Tempo")
-    plt.ylabel("Resultados_SENO")
+plt.title ("Grafico_SENO")
+plt.xlabel("Tempo")
+plt.ylabel("Resultados_SENO")
 
-    plt.savefig("fig/grafico.gif")
+plt.savefig("fig/grafico.jpeg")
 
-    plt.close()
+plt.close()
 
 # Ainda não rodei, se vc tiver com o jupyter, tenta rodar pra ver como ta, acho que o grafico ta sobrescrevendo, pq falta uma parte, essa aqui
 
