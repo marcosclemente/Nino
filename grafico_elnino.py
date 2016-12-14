@@ -9,11 +9,13 @@ x = 0
 # A lista fazia que dps vai conter os resultados dos senos, é a nossa f(x)
 eixo_y = []
 
+
 # Um for pra calcular os senos, ai eu botei 361, pra ir ate 360. Mas to na duvida se o valor do angulo tem que ser em radiano.
-for x in range(0, 361):
-    f(x) = SEN(x)
+for t in range(0,61):
+    for x in range(0, 361):
+        f(x) = sin(x)
     # Add os resultados dos senos na lista
-    eixo_y = eixo_y.append(f(x))
+        eixo_y = eixo_y.append(f(x))
 
 # Fazendo o gráfico
 
@@ -25,7 +27,7 @@ plt.title ("Grafico_SENO")
 plt.xlabel("Tempo")
 plt.ylabel("Resultados_SENO")
 
-plt.savefig("fig/grafico.png")
+plt.savefig("fig/grafico.gif")
 
 plt.close()
 
