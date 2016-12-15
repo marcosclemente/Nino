@@ -11,6 +11,7 @@ eixo_y = []
 x = 0
 y = 0
 
+A = 1
 # Um for pra calcular os senos, ai eu botei 361, pra ir ate 360. Mas to na duvida se o valor do angulo tem que ser em radiano.
 for t in range(0, 61):
     tempo.append(t)
@@ -27,6 +28,7 @@ for x in range(0, 361, 6):
     eixo_y.append(y)
     #print(eixo_y)
 
+
 # Fazendo o gráfico
 
 plt.figure()
@@ -40,6 +42,35 @@ plt.ylabel("Resultados_SENO")
 plt.savefig("fig/grafico.jpeg")
 
 plt.close()
+
+# Fazendo o gráfico animado
+
+for t in range(0, 61):
+    tempo.append(t)
+
+# ta de 6 em 6 que é pra cada valor de tempo ter um valor de seno
+for x in range(0, 361, 6):
+    # a funcao radians converte grau para radiano
+    x = math.radians(x)
+    #print(x)
+    y = math.sin(x)
+    # Add os resultados dos senos na lista
+    eixo_y.append(y)
+    #print(eixo_y)
+
+#for i in tempo:
+#for r in eixo_y:
+
+    #plt.figure()
+    #plt.plot(i, r, "or")
+    #plt.title ("Grafico_SENO")
+    #plt.xlabel("Tempo")
+    #plt.ylabel("Resultados_SENO")
+    #plt.savefig("fig/grafico-{}.jpeg".format(A))
+    #A = A+1
+    #plt.close()
+#
+
 
 # Ainda não rodei, se vc tiver com o jupyter, tenta rodar pra ver como ta, acho que o grafico ta sobrescrevendo, pq falta uma parte, essa aqui
 
